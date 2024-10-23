@@ -1,0 +1,31 @@
+server:
+  port: 8083
+  servlet:
+    context-path: /authorization
+
+spring:
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: sa
+    url: jdbc:postgresql://localhost:5433/bankdb
+
+  jpa:
+    properties:
+      hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+    format-sql: true
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    show-sql: false
+
+  liquibase:
+    enabled: true
+
+  application:
+    name: authorization
+
+jwt:
+  secret-key: 53A73E5F1C4E0A2D3B5F2D784E6A1B423D6F247D1F6E5C3A596D635A75327855
+  expiration: 3600000
