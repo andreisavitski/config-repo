@@ -1,8 +1,3 @@
-server:
-  port: 8084
-  servlet:
-    context-path: /card
-
 spring:
   liquibase:
     enabled: true
@@ -21,9 +16,6 @@ spring:
       ddl-auto: validate
     open-in-view: false
     show-sql: false
-
-  application:
-    name: card
 
   rabbitmq:
     host: rabbitmq
